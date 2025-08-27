@@ -1,0 +1,14 @@
+{
+  "2025-08-26": {
+    "sport": "Run",
+    "duration_min": 50,
+    "intensity": "moderate",
+    "rationale": "This run will help improve endurance following your recent long run, while also allowing for recovery from the higher intensity of your last ride. The duration is set to build on the aerobic capacity developed in the previous sessions."
+  },
+  "2025-08-27": {
+    "sport": "swim",
+    "duration_min": 50,
+    "intensity": "moderate",
+    "rationale": "Given Abboud's limited swim time and focus on the Ironman 70.3, a longer swim session will enhance his endurance in the water. This session ensures adaptation to pacing and builds confidence, while also allowing for gradual warm-up and cooldown periods to mitigate any hamstring tightness."
+  }
+}

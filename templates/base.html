@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadence</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 200px;
+            background: #222;
+            color: white;
+            height: 100vh;
+            padding: 20px 0;
+        }
+        .sidebar .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .sidebar .logo img {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+        }
+        .sidebar .logo span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a.active {
+            background: #28a745;
+            border-radius: 5px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Logo & App Name -->
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Cadence Logo">
+            <span>Cadence</span>
+        </div>
+
+        <!-- Nav Links -->
+        <a href="/" class="{% if active_page == 'home' %}active{% endif %}">Home</a>
+        <a href="/profile" class="{% if active_page == 'profile' %}active{% endif %}">Profile</a>
+        <a href="/activities" class="{% if active_page == 'activities' %}active{% endif %}">Activities</a>
+        <a href="/coach" class="{% if active_page == 'coach' %}active{% endif %}">Coach</a>
+        <a href="/schedule" class="{% if active_page == 'schedule' %}active{% endif %}">Schedule</a>
+        <a href="/chat" class="{% if active_page == 'chat' %}active{% endif %}">Chat</a>
+        <a href="{{ url_for('aura') }}" class="{% if active_page == 'aura' %}active{% endif %}">Aura Farm</a>
+    </div>
+
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

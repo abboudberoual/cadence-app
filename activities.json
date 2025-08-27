@@ -1,0 +1,281 @@
+[
+  {
+    "id": 15578310408,
+    "name": "Afternoon Swim",
+    "type": "Swim",
+    "distance_km": 1.3,
+    "moving_time_min": 42.733333333333334,
+    "avg_hr": null,
+    "avg_cadence": 16.0,
+    "avg_power": null,
+    "calories": 8.0,
+    "splits": [
+      {
+        "distance": 1000.0,
+        "elapsed_time": 2758,
+        "elevation_difference": 0.0,
+        "moving_time": 2758,
+        "split": 1,
+        "average_speed": 0.36,
+        "average_grade_adjusted_speed": 0.36,
+        "pace_zone": 0
+      },
+      {
+        "distance": 300.0,
+        "elapsed_time": 785,
+        "elevation_difference": 0.0,
+        "moving_time": 785,
+        "split": 2,
+        "average_speed": 0.38,
+        "average_grade_adjusted_speed": 0.38,
+        "pace_zone": 0
+      }
+    ]
+  },
+  {
+    "id": 15571771984,
+    "name": "Night Run",
+    "type": "Run",
+    "distance_km": 15.0782,
+    "moving_time_min": 120.36666666666666,
+    "avg_hr": 146.2,
+    "avg_cadence": 86.6,
+    "avg_power": null,
+    "calories": 887.0,
+    "splits": [
+      {
+        "distance": 1001.2,
+        "elapsed_time": 487,
+        "elevation_difference": 0.8,
+        "moving_time": 487,
+        "split": 1,
+        "average_speed": 2.06,
+        "average_grade_adjusted_speed": 2.09,
+        "average_heartrate": 146.95991561181435,
+        "pace_zone": 0
+      },
+      {
+        "distance": 1004.5,
+        "elapsed_time": 478,
+        "elevation_difference": -10.8,
+        "moving_time": 478,
+        "split": 2,
+        "average_speed": 2.1,
+        "average_grade_adjusted_speed": 2.07,
+        "average_heartrate": 145.95248868778282,
+        "pace_zone": 0
+      },
+      {
+        "distance": 996.0,
+        "elapsed_time": 548,
+        "elevation_difference": 3.2,
+        "moving_time": 470,
+        "split": 3,
+        "average_speed": 2.12,
+        "average_grade_adjusted_speed": 2.17,
+        "average_heartrate": 145.72444444444446,
+        "pace_zone": 0
+      },
+      {
+        "distance": 1008.6,
+        "elapsed_time": 464,
+        "elevation_difference": -5.4,
+        "moving_time": 464,
+        "split": 4,
+        "average_speed": 2.17,
+        "average_grade_adjusted_speed": 2.19,
+        "average_heartrate": 150.9719827586207,
+        "pace_zone": 0
+      },
+      {
+        "distance": 996.2,
+        "elapsed_time": 495,
+        "elevation_difference": -1.2,
+        "moving_time": 495,
+        "split": 5,
+        "average_speed": 2.01,
+        "average_grade_adjusted_speed": 2.04,
+        "average_heartrate": 149.40946502057614,
+        "pace_zone": 0
+      },
+      {
+        "distance": 1011.6,
+        "elapsed_time": 585,
+        "elevation_difference": -5.4,
+        "moving_time": 554,
+        "split": 6,
+        "average_speed": 1.83,
+        "average_grade_adjusted_speed": 1.82,
+        "average_heartrate": 144.33258928571428,
+        "pace_zone": 0
+      },
+      {
+        "distance": 984.4,
+        "elapsed_time": 534,
+        "elevation_difference": 5.0,
+        "moving_time": 482,
+        "split": 7,
+        "average_speed": 2.04,
+        "average_grade_adjusted_speed": 2.12,
+        "average_heartrate": 142.84162895927602,
+        "pace_zone": 0
+      },
+      {
+        "distance": 1003.0,
+        "elapsed_time": 556,
+        "elevation_difference": -4.2,
+        "moving_time": 430,
+        "split": 8,
+        "average_speed": 2.33,
+        "average_grade_adjusted_speed": 2.36,
+        "average_heartrate": 145.94416243654823,
+        "pace_zone": 0
+      },
+      {
+        "distance": 999.9,
+        "elapsed_time": 499,
+        "elevation_difference": -4.0,
+        "moving_time": 443,
+        "split": 9,
+        "average_speed": 2.26,
+        "average_grade_adjusted_speed": 2.26,
+        "average_heartrate": 144.04632152588556,
+        "pace_zone": 0
+      },
+      {
+        "distance": 996.9,
+        "elapsed_time": 526,
+        "elevation_difference": -4.6,
+        "moving_time": 493,
+        "split": 10,
+        "average_speed": 2.02,
+        "average_grade_adjusted_speed": 2.03,
+        "average_heartrate": 144.89662921348315,
+        "pace_zone": 0
+      },
+      {
+        "distance": 1007.2,
+        "elapsed_time": 563,
+        "elevation_difference": 0.2,
+        "moving_time": 485,
+        "split": 11,
+        "average_speed": 2.08,
+        "average_grade_adjusted_speed": 2.11,
+        "average_heartrate": 141.9685230024213,
+        "pace_zone": 0
+      },
+      {
+        "distance": 994.3,
+        "elapsed_time": 494,
+        "elevation_difference": -2.2,
+        "moving_time": 494,
+        "split": 12,
+        "average_speed": 2.01,
+        "average_grade_adjusted_speed": 2.08,
+        "average_heartrate": 146.64395604395605,
+        "pace_zone": 0
+      },
+      {
+        "distance": 998.4,
+        "elapsed_time": 721,
+        "elevation_difference": -2.8,
+        "moving_time": 503,
+        "split": 13,
+        "average_speed": 1.98,
+        "average_grade_adjusted_speed": 2.04,
+        "average_heartrate": 142.12723214285714,
+        "pace_zone": 0
+      },
+      {
+        "distance": 999.7,
+        "elapsed_time": 522,
+        "elevation_difference": -0.8,
+        "moving_time": 500,
+        "split": 14,
+        "average_speed": 2.0,
+        "average_grade_adjusted_speed": 2.07,
+        "average_heartrate": 150.17256637168143,
+        "pace_zone": 0
+      },
+      {
+        "distance": 1002.7,
+        "elapsed_time": 546,
+        "elevation_difference": -2.0,
+        "moving_time": 419,
+        "split": 15,
+        "average_speed": 2.39,
+        "average_grade_adjusted_speed": 2.4,
+        "average_heartrate": 150.93650793650792,
+        "pace_zone": 0
+      },
+      {
+        "distance": 73.6,
+        "elapsed_time": 31,
+        "elevation_difference": 0.2,
+        "moving_time": 31,
+        "split": 16,
+        "average_speed": 2.37,
+        "average_grade_adjusted_speed": 2.38,
+        "average_heartrate": 142.7741935483871,
+        "pace_zone": 0
+      }
+    ]
+  },
+  {
+    "id": 15557259491,
+    "name": "Afternoon Ride",
+    "type": "Ride",
+    "distance_km": 0.0,
+    "moving_time_min": 150.11666666666667,
+    "avg_hr": 144.7,
+    "avg_cadence": null,
+    "avg_power": null,
+    "calories": 1025.0,
+    "splits": null
+  },
+  {
+    "id": 15544281028,
+    "name": "Afternoon Swim",
+    "type": "Swim",
+    "distance_km": 1.6,
+    "moving_time_min": 46.81666666666667,
+    "avg_hr": null,
+    "avg_cadence": 18.0,
+    "avg_power": null,
+    "calories": 21.0,
+    "splits": [
+      {
+        "distance": 1000.0,
+        "elapsed_time": 2526,
+        "elevation_difference": 0.0,
+        "moving_time": 2526,
+        "split": 1,
+        "average_speed": 0.4,
+        "average_grade_adjusted_speed": 0.4,
+        "pace_zone": 0
+      },
+      {
+        "distance": 600.0,
+        "elapsed_time": 1940,
+        "elevation_difference": 0.0,
+        "moving_time": 1940,
+        "split": 2,
+        "average_speed": 0.31,
+        "average_grade_adjusted_speed": 0.31,
+        "pace_zone": 0
+      }
+    ]
+  },
+  {
+    "id": 15534283096,
+    "name": "Evening Ride",
+    "type": "Run",
+    "distance_km": 0.0,
+    "moving_time_min": 25.216666666666665,
+    "avg_hr": 160.5,
+    "avg_cadence": null,
+    "avg_power": null,
+    "calories": 268.0,
+    "splits": null
+  }
+]

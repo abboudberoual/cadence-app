@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Share Preview</h2>
+
+<div style="display:flex; gap:30px; align-items:flex-start;">
+    <!-- Left side: Preview -->
+    <div id="preview-container" style="flex:1; text-align:center;">
+        <div id="preview-box" style="background:black; display:inline-block; position:relative;">
+    <img id="preview-img" src="{{ preview_image }}" alt="Preview"
+         style="width:100%; height:100%; object-fit:cover;">
+
+    <!-- Stats overlay -->
+    <div id="overlay" style="position:absolute; bottom:20px; left:20px; color:white; text-align:left;">
+        <p><b>{{ activity.name }}</b></p>
+        <p>{{ activity.distance_km }} km • {{ activity.moving_time_min }} min</p>
+        {% if activity.avg_hr %}<p>❤️ {{ activity.avg_hr|round(0) }} bpm</p>{% endif %}
+        {% if activity.avg_cadence %}<p>⚡ {{ activity.avg_cadence|round(1) }}</p>{% endif %}
+    </div>
+
+    <!-- Powered by Strava logo -->
+    <img src="{{ url_for('static', filename='powered_by_strava.png') }}" 
+         alt="Powered by Strava" 
+         style="width:120px; position:absolute; bottom:10px; right:10px;">
+</div>
+
+    </div>
+
+    <!-- Right side: Controls -->
+    <div style="flex:1;">
+        <h3>Format</h3>
+        <select id="format-select">
+            <option value="1080x1080">Square Post (1080×1080)</option>
+            <option value="1080x1350">Portrait Post (1080×1350)</option>
+            <option value="1080x1920">Story/Reel (1080×1920)</option>
+        </select>
+
+        <h3 style="margin-top:20px;">Images</h3>
+        {% if images %}
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                {% for img in images %}
+                <img src="{{ img }}" class="thumb"
+                     style="width:100px; cursor:pointer; border:2px solid transparent;"
+                     onclick="selectImage(this)">
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No images available. Default map will be used.</p>
+        {% endif %}
+
+        <!-- Toggle control -->
+        <h3 style="margin-top:20px;">Overlay</h3>
+        <label>
+            <input type="checkbox" id="toggle-stats" checked>
+            Show Stats Sticker
+        </label>
+    </div>
+</div>
+
+<script>
+function selectImage(el) {
+    document.getElementById("preview-img").src = el.src;
+    // Highlight selected
+    document.querySelectorAll(".thumb").forEach(t => t.style.border="2px solid transparent");
+    el.style.border = "2px solid limegreen";
+}
+
+document.getElementById("format-select").addEventListener("change", function() {
+    let box = document.getElementById("preview-box");
+    let size = this.value.split("x");
+    box.style.width = size[0] + "px";
+    box.style.height = size[1] + "px";
+});
+
+document.getElementById("toggle-stats").addEventListener("change", function() {
+    document.getElementById("sticker").style.display = this.checked ? "block" : "none";
+});
+</script>
+{% endblock %}

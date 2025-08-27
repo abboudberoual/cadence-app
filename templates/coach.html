@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Coach Advice ({{ source }})</h2>
+
+<div style="background:#f9f9f9; border:1px solid #ddd; padding:20px; border-radius:8px; max-width:800px;">
+    {% if advice %}
+        <p><b>Sport:</b> {{ advice.sport }}</p>
+        <p><b>Duration:</b> {{ advice.duration_min }} min</p>
+        <p><b>Intensity:</b> {{ advice.intensity }}</p>
+        <p><b>Rationale:</b> {{ advice.rationale }}</p>
+    {% else %}
+        <p>No advice available. Please generate a plan first.</p>
+    {% endif %}
+</div>
+{% endblock %}

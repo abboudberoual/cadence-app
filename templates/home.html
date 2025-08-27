@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome to Cadence</h2>
+<div class="dashboard">
+    <a href="/profile" class="tile">
+        <h3>🏃 Athlete Profile</h3>
+        <p>Edit your race goals, injuries, and preferences.</p>
+    </a>
+    <a href="/activities" class="tile">
+        <h3>📊 Activities</h3>
+        <p>View your last Strava workouts with detailed metrics.</p>
+    </a>
+    <a href="/coach" class="tile">
+        <h3>🤖 Coach</h3>
+        <p>Generate AI-driven training advice & plans.</p>
+    </a>
+    <a href="/schedule" class="tile">
+        <h3>🗓️ Schedule</h3>
+        <p>See your upcoming training calendar.</p>
+    </a>
+    <a href="/chat" class="tile">
+        <h3>💬 Chat</h3>
+        <p>Ask Cadence questions and get feedback.</p>
+    </a>
+    <a href="/connect" class="tile">
+    <h3>🔗 Connect Strava</h3>
+    <p>Authorize Strava to sync your activities.</p>
+    </a>
+    <a href="/aura" class="tile">
+    <h3>✨ Aura Farm</h3>
+    <p>Create Instagram-ready visuals from your activities.</p>
+    </a>
+</div>
+
+<style>
+    .dashboard {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .tile {
+        background: #2c2f33;
+        color: white;
+        text-decoration: none;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.2s, background 0.2s;
+    }
+    .tile:hover {
+        background: #40444b;
+        transform: translateY(-5px);
+    }
+</style>
+{% endblock %}

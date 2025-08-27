@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Athlete Profile</h2>
+<form method="POST">
+
+  <!-- Identity -->
+  <h3>Identity</h3>
+  Name: <input type="text" name="name" value="{{ profile.identity.name }}"><br>
+  DOB: <input type="date" name="dob" value="{{ profile.identity.dob }}"><br>
+  Sex: <input type="text" name="sex" value="{{ profile.identity.sex }}"><br>
+  Timezone: <input type="text" name="timezone" value="{{ profile.identity.timezone }}"><br>
+  Locale: <input type="text" name="locale" value="{{ profile.identity.locale }}"><br><br>
+
+  <!-- Anthropometrics -->
+  <h3>Anthropometrics</h3>
+  Height (cm): <input type="number" name="height_cm" value="{{ profile.anthropometrics.height_cm }}"><br>
+  Weight (kg): <input type="number" name="weight_kg" value="{{ profile.anthropometrics.weight_kg }}"><br>
+  Body Fat %: <input type="number" step="0.1" name="bodyfat_percent" value="{{ profile.anthropometrics.bodyfat_percent }}"><br><br>
+
+  <!-- Goals -->
+  <h3>Goals & Methodology</h3>
+  Goal Race Name: <input type="text" name="race_name" value="{{ profile.goals.races[0].name }}"><br>
+  Race Date: <input type="date" name="race_date" value="{{ profile.goals.races[0].date }}"><br>
+  Priority: <input type="text" name="race_priority" value="{{ profile.goals.races[0].priority }}"><br>
+  Methodology: <input type="text" name="methodology" value="{{ profile.goals.methodology }}"><br>
+  Preferences (indoor ok?): <input type="checkbox" name="indoor_ok" {% if profile.goals.preferences.indoor_ok %}checked{% endif %}><br><br>
+
+  <!-- Thresholds -->
+  <h3>Thresholds</h3>
+  Run threshold pace: <input type="text" name="run_pace" value="{{ profile.thresholds.run.threshold_pace }}"><br>
+  Run threshold HR: <input type="number" name="run_hr" value="{{ profile.thresholds.run.threshold_hr }}"><br>
+  Bike FTP (W): <input type="number" name="bike_ftp" value="{{ profile.thresholds.bike.ftp }}"><br>
+  Bike W/kg: <input type="number" step="0.1" name="bike_wkg" value="{{ profile.thresholds.bike.w_kg }}"><br>
+  Swim CSS (sec/100m): <input type="text" name="swim_css" value="{{ profile.thresholds.swim.css }}"><br><br>
+
+  <!-- Injuries -->
+  <h3>Injury</h3>
+  Area: <input type="text" name="injury_area" value="{{ profile.injuries[0].area }}"><br>
+  Status: <input type="text" name="injury_status" value="{{ profile.injuries[0].status }}"><br><br>
+
+  <!-- Nutrition -->
+  <h3>Nutrition</h3>
+  Diet: <input type="text" name="diet" value="{{ profile.nutrition.diet }}"><br>
+  Restrictions: <input type="text" name="restrictions" value="{{ profile.nutrition.restrictions }}"><br><br>
+
+  <!-- Equipment -->
+  <h3>Equipment</h3>
+  Bike: <input type="text" name="bike" value="{{ profile.equipment.bike }}"><br>
+  Sensors: <input type="text" name="sensors" value="{{ profile.equipment.sensors }}"><br><br>
+
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

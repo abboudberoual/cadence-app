@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 style="display: flex; justify-content: space-between; align-items: center;">
+    Training Schedule — {{ month_name }} {{ year }}
+    <a href="/calendar.ics" class="btn" style="font-size:14px; padding:6px 12px; background:#4CAF50; color:white; text-decoration:none; border-radius:4px;">
+        📅 Export .ics
+    </a>
+</h2>
+
+<div style='margin: 10px 0;'>
+    <a href='/schedule?year={{ prev_year }}&month={{ prev_month }}'>&laquo; Prev</a> |
+    <b>{{ month_name }} {{ year }}</b> |
+    <a href='/schedule?year={{ next_year }}&month={{ next_month }}'>Next &raquo;</a>
+</div>
+
+<table style="width:100%; height:90vh; border-collapse:collapse; table-layout:fixed;">
+    <tr>
+        {% for day in ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"] %}
+        <th style="background:#333; color:white; padding:10px;">{{ day }}</th>
+        {% endfor %}
+    </tr>
+    {% for week in cal %}
+    <tr>
+        {% for day in week %}
+        {% if day == 0 %}
+            <td></td>
+        {% else %}
+            {% set date_str = year|string + "-" + "%02d"|format(month) + "-" + "%02d"|format(day) %}
+            <td style="border:1px solid #999; vertical-align:top; padding:10px; font-size:16px; height:15vh;">
+                <b>{{ day }}</b><br>
+                {% if date_str in plans %}
+                    {{ plans[date_str].sport }}<br>
+                    {{ plans[date_str].duration_min }} min<br>
+                    {{ plans[date_str].intensity }}<br>
+                    <small>{{ plans[date_str].rationale }}</small>
+                {% endif %}
+            </td>
+        {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

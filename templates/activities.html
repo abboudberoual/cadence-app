@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Activities</h2>
+
+<table style="width:100%; border-collapse:collapse;">
+  <tr style="background:#333; color:white;">
+    <th>Sport</th>
+    <th>Title</th>
+    <th>Date/Time</th>
+    <th>Duration</th>
+    <th>Distance (km)</th>
+    <th>Avg HR</th>
+    <th>Cadence/SPM</th>
+  </tr>
+  {% for a in activities %}
+  <tr style="border-bottom:1px solid #ddd;">
+    <td>{{ a.sport }}</td>
+    <td><a href="/activities/{{ a.id }}">{{ a.name }}</a></td>
+    <td>{{ a.date }}</td>
+    <td>{{ a.duration_min }} min</td>
+    <td>{{ a.distance_km }}</td>
+    <td>{{ a.avg_hr or "-" }}</td>
+    <td>{{ a.avg_cadence or "-" }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<div style="margin-top:10px;">
+  {% if page > 1 %}
+    <a href="/activities?page={{ page-1 }}">« Prev</a>
+  {% endif %}
+  <span style="margin:0 10px;">Page {{ page }}</span>
+  <a href="/activities?page={{ page+1 }}">Next »</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{
+  "identity": {
+    "name": "",
+    "dob": "",
+    "sex": "",
+    "timezone": "",
+    "locale": ""
+  },
+  "anthropometrics": {
+    "height_cm": null,
+    "weight_kg": null,
+    "bodyfat_percent": null
+  },
+  "goals": {
+    "races": [
+      {"name": "", "date": "", "priority": ""}
+    ],
+    "methodology": "",
+    "preferences": {
+      "indoor_ok": false,
+      "treadmill_ok": false,
+      "open_water_comfort": ""
+    }
+  },
+  "constraints": {
+    "training_windows": "",
+    "work_hours": "",
+    "travel_dates": ""
+  },
+  "injuries": [
+    {"area": "", "onset": "", "severity": "", "status": "", "contraindications": ""}
+  ],
+  "thresholds": {
+    "run": {"threshold_pace": "", "threshold_hr": null},
+    "bike": {"ftp": null, "w_kg": null},
+    "swim": {"css": ""}
+  },
+  "nutrition": {
+    "diet": "",
+    "restrictions": ""
+  },
+  "equipment": {
+    "bike": "",
+    "sensors": ""
+  }
+}

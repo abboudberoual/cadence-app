@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Activity Details</h2>
+
+<div style="background:#f9f9f9; border:1px solid #ddd; padding:20px; border-radius:8px; max-width:800px;">
+    <p><b>Sport:</b> {{ activity.type }}</p>
+    <p><b>Title:</b> {{ activity.name }}</p>
+   <p><b>Date/Time:</b> {{ activity.start_date_local }}</p>
+<p><b>Duration:</b> {{ activity.moving_time_min }} min</p>
+<p><b>Distance:</b> {{ activity.distance_km|round(2) }} km</p>
+{% if activity.avg_hr %}
+    <p><b>Avg HR:</b> {{ activity.avg_hr|round(0) }} bpm</p>
+{% endif %}
+{% if activity.avg_cadence %}
+    <p><b>Cadence/SPM:</b> {{ activity.avg_cadence|round(1) }}</p>
+{% endif %}
+{% if activity.avg_power %}
+    <p><b>Avg Power:</b> {{ activity.avg_power|round(0) }} W</p>
+{% endif %}
+
+
+
+<h3>Splits</h3>
+{% if activity.splits_metric %}
+    <table style="width:100%; border-collapse:collapse;">
+        <tr>
+            <th>Km</th>
+            <th>Time</th>
+            <th>Pace (min/km)</th>
+        </tr>
+        {% for split in activity.splits_metric %}
+        {% set km = split['distance'] / 1000 %}
+        {% set secs = split['moving_time'] %}
+        {% set pace = (secs / km) if km > 0 else None %}
+        <tr>
+            <td>{{ km|round(2) }}</td>
+            <td>
+                {{ (secs // 60)|int }}:{{ '%02d' % (secs % 60) }}
+            </td>
+            <td>
+                {% if pace %}
+                    {{ (pace // 60)|int }}:{{ '%02d' % (pace % 60) }} /km
+                {% else %}
+                    -
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No split data available.</p>
+{% endif %}
+
+</div>
+
+<a href="{{ url_for('activities') }}">← Back to Activities</a>
+{% endblock %}

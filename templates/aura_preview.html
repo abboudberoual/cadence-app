@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Share Preview</h2>
+<div style="width:400px; background:black; color:white; padding:20px; border-radius:8px;">
+    {% if activity.photo_url %}
+        <img src="{{ activity.photo_url }}" style="width:100%; border-radius:8px;">
+    {% else %}
+        <div style="width:100%; height:300px; background:#000; border-radius:8px;"></div>
+    {% endif %}
+
+    <h3>{{ activity.name }}</h3>
+    <p>{{ activity.distance_km|round(2) }} km • {{ activity.duration_min }} min</p>
+    {% if activity.avg_hr %}
+        <p>❤️ {{ activity.avg_hr|round(0) }} bpm</p>
+    {% endif %}
+    {% if activity.avg_cadence %}
+        <p>⚡ {{ activity.avg_cadence|round(1) }}</p>
+    {% endif %}
+</div>
+{% endblock %}
